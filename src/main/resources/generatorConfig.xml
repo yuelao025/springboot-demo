@@ -54,19 +54,15 @@
 
         <!--<table schema="blog" tableName="user" domainObjectName="Topic" ></table>-->
 
-        <!--<table schema="blog" tableName="user" domainObjectName="Notification" ></table>-->
+        <!--<dependency>-->
 
-        <!--<table schema="blog" tableName="like" domainObjectName="Like" ></table>-->
+            <!--<groupId>org.mybatis.spring.boot</groupId>-->
 
-        <!--<table schema="blog" tableName="user" domainObjectName="Follow" ></table>-->
+            <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
 
-        <!--<table schema="blog" tableName="user" domainObjectName="Comment" ></table>-->
+            <!--<version>1.1.1</version>-->
 
-        <!--<table schema="blog" tableName="user" domainObjectName="Collect" ></table>-->
-
-        <!--<table schema="blog" tableName="user" domainObjectName="Category" ></table>-->
-
-        <!--<table schema="blog" tableName="user" domainObjectName="*" ></table>-->
+        <!--</dependency>-->
 
     </context>
 </generatorConfiguration>

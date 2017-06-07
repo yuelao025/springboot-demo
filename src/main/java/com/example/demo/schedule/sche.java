@@ -12,14 +12,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 @EnableScheduling
 public class sche {
 
-    @Scheduled(cron = "*/10 * * * * ?")
+    @Scheduled(cron = "*/60 * * * * ?")
     public void schedule(){
         System.out.println("dida!");
     }
-
-    @Scheduled(cron = "*/5 * * * * ?")
-    public void schedule11(){
-        System.out.println("schedule11!");
-    }
+//
+//    @Scheduled(cron = "*/5 * * * * ?")
+//    public void schedule11(){
+//        System.out.println("schedule11!");
+//    }
 
 }

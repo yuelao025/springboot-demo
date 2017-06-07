@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.User;
-import com.example.demo.service.UserService;
+import com.example.demo.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,14 +15,10 @@ public class TestController {
     @Autowired
     private UserService userService;
 
-//    @RequestMapping("/userinfo")
-//    public User demo(){
-//
-//        User user = new User();
-//        user.setEmail("wmW@shein.com");
-//        user.setName("vip!");
-//        return user;
-//    }
+    @RequestMapping("/userinfo")
+    public User demo(){
+        return  new User();
+    }
 
     @RequestMapping("test")
     public int test()

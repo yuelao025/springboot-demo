@@ -1,7 +1,8 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
-import com.example.demo.model.User;
 import com.example.demo.mapper.UserMapper;
+import com.example.demo.service.IUser;
+import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
  * Created by wanmin on 2017/6/7.
  */
 @Service
-public class UserService {
+public class UserService implements IUser {
 
     @Autowired
     private UserMapper userMapper;
