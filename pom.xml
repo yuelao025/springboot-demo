@@ -83,6 +83,24 @@
 			<version>1.0.18</version>
 		</dependency>
 
+		<!--
+
+        MyBatis提供了拦截器接口，我们可以实现自己的拦截器，
+
+        将其作为一个plugin装入到SqlSessionFactory中。
+
+       Github上有位开发者写了一个分页插件，我觉得使用起来还可以，挺方便的。
+
+       Github项目地址： https://github.com/pagehelper/Mybatis-PageHelper
+
+     -->
+
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+
 		<!--<dependency>-->
 			<!--<groupId>junit</groupId>-->
 			<!--<artifactId>junit</artifactId>-->
@@ -99,6 +117,27 @@
 					<!--fork :  如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
 					<fork>true</fork>
 				</configuration>
+			</plugin>
+			<!-- mybatis generator plugin  -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.5</version>
+				<configuration>
+					<configurationFile>
+						src/main/resources/generatorConfig.xml
+					</configurationFile>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+				</configuration>
+				<executions>
+					<execution>
+						<id>Generate MyBatis Artifacts</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
