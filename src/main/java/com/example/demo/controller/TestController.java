@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
-import com.example.demo.pojo.User;
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,14 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping("/userinfo")
-    public User demo(){
+    @Autowired
+    private UserService userService;
 
-        User user = new User();
-        user.setEmail("wmW@shein.com");
-        user.setName("vip!");
-        return user;
-    }
+//    @RequestMapping("/userinfo")
+//    public User demo(){
+//
+//        User user = new User();
+//        user.setEmail("wmW@shein.com");
+//        user.setName("vip!");
+//        return user;
+//    }
 
     @RequestMapping("test")
     public int test()
@@ -25,11 +30,16 @@ public class TestController {
         return 19/0;
     }
 
-    public User noField(){
+//    public User noField(){
+//
+//        User u = new User();
+//        u.setEmail("yoho@163.com");
+//        u.setName("qiho360");
+//        return  u;
+//    }
 
-        User u = new User();
-        u.setEmail("yoho@163.com");
-        u.setName("qiho360");
-        return  u;
+    @RequestMapping("info")
+    public User getList(){
+      return  userService.getInfo();
     }
 }

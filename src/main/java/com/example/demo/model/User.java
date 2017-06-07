@@ -1,4 +1,6 @@
-package com.example.model;
+package com.example.demo.model;
+
+import com.alibaba.fastjson.annotation.JSONField;
 
 import java.util.Date;
 
@@ -19,6 +21,7 @@ public class User {
      *
      * @mbg.generated
      */
+    @JSONField(serialize = false)
     private String username;
 
     /**

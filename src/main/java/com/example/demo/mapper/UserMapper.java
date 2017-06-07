@@ -1,6 +1,6 @@
-package com.example.mapper;
+package com.example.demo.mapper;
 
-import com.example.model.User;
+import com.example.demo.model.User;
 
 public interface UserMapper {
     /**
