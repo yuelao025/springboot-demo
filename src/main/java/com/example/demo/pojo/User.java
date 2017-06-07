@@ -1,5 +1,7 @@
 package com.example.demo.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 /**
  * Created by wanmin on 2017/6/7.
  */
@@ -7,6 +9,7 @@ public class User {
 
     public String name;
 
+    @JSONField(serialize = false)
     public String email;
 
     public User() {

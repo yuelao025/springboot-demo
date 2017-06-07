@@ -24,4 +24,12 @@ public class TestController {
     {
         return 19/0;
     }
+
+    public User noField(){
+
+        User u = new User();
+        u.setEmail("yoho@163.com");
+        u.setName("qiho360");
+        return  u;
+    }
 }
