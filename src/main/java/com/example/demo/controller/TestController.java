@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.pojo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,8 +10,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping("/test")
-    public String demo(){
-        return "demo!";
+    @RequestMapping("/userinfo")
+    public User demo(){
+
+        User user = new User();
+        user.setEmail("wmW@shein.com");
+        user.setName("vip!");
+        return user;
+    }
+
+    @RequestMapping("test")
+    public int test()
+    {
+        return 19/0;
     }
 }
