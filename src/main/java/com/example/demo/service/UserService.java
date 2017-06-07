@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by wanmin on 2017/6/7.
  */
-@Service("UserMapper")
+@Service
 public class UserService {
 
     @Autowired
