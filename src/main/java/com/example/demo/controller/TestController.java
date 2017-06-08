@@ -34,7 +34,7 @@ public class TestController {
 //        return  u;
 //    }
 
-    @RequestMapping("info")
+    @RequestMapping("hello")
     public User getList(){
       return  userService.getInfo();
     }

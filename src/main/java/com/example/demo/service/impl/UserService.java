@@ -17,7 +17,7 @@ public class UserService implements IUser {
 
     public User getInfo()
     {
-        Integer uid = new Integer(1);
+        Integer uid = new Integer(2);
         return  userMapper.selectByPrimaryKey(uid);
 
     }
