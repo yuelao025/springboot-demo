@@ -16,7 +16,7 @@ https://github.com/mybatis/spring-boot-starter/issues/141 [排查N久]
 
 @MapperScan(basePackages = "com.example.demo.dao")  //不要忘记了否则会找不到bean报错
 public class SpringBootDemoApplication {
-  
+
 }
 ```
 
