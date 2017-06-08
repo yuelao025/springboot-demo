@@ -14,7 +14,7 @@ import org.springframework.http.converter.HttpMessageConverter;
 
 @SpringBootApplication
 //@MapperScan("com.example.demo.mapper")
-@MapperScan(basePackages = "com.example.demo.mapper")  //不要忘记了否则会找不到bean报错
+@MapperScan(basePackages = "com.example.demo.dao")  //不要忘记了否则会找不到bean报错
 public class SpringBootDemoApplication {
 
 
