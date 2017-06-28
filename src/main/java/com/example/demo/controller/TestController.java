@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.model.User;
 import com.example.demo.service.impl.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +18,12 @@ import java.util.Map;
  */
 @RestController
 public class TestController {
+
+
+//    private  final Logger logger = (Logger) LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
+
 
     @Autowired
     private UserService userService;
@@ -46,6 +54,12 @@ public class TestController {
         User u = new User();
         u.setEmail("wm@aa.com");
         u.setCity("nj");
+//默认情况下，spring boot从控制台打印出来的日志级别只有ERROR, WARN 还有INFO
+        logger.info("info");
+        logger.debug("debug....");
+        logger.warn("warn....");
+        logger.trace("trace.....");
+        logger.error("error.......");
         return u;
     }
 
