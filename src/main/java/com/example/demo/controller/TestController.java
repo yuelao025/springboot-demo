@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.model.User;
 import com.example.demo.service.impl.UserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import java.util.Map;
  * Created by wanmin on 2017/5/30.
  */
 @RestController
+@Api(value = "测试类",tags = "测试接口")
 public class TestController {
 
 
@@ -49,6 +52,7 @@ public class TestController {
 
 
     @RequestMapping("pojo")
+    @ApiOperation(value="测试接口", notes="测试接口详细描述")
     public User getPojo()
     {
         User u = new User();
@@ -64,6 +68,7 @@ public class TestController {
     }
 
     @RequestMapping("list")
+    @ApiOperation(value="测试list", notes="测试接口list详细描述")
     public List<User> triveList()
     {
         List<User> l = new LinkedList<>();
